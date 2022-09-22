@@ -16,7 +16,7 @@ app.use('/products', productRoute)
 
 // routes
 app.get("/", (req, res) => {
-    res.send("this is get")
+    res.send("Server is Running in Heroku")
 } )
 
 // connect to db
