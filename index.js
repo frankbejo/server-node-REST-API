@@ -3,8 +3,14 @@ const app = express();
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const productRoute = require('./routes/products')
+const designerRoute = require('./routes/designer')
+const cors = require('cors')
 require('dotenv/config')
 
+
+app.use(cors({
+    origin: "http://localhost:3000"
+}))
 // middlewares
 // app.use('/products', () => {
 //     console.log(" middleware running")
@@ -13,7 +19,7 @@ app.use(bodyParser.json());
 
 // import routes
 app.use('/products', productRoute)
-
+app.use('/designer', designerRoute)
 // routes
 app.get("/", (req, res) => {
     res.send("Server is Running in Heroku")

@@ -27,11 +27,14 @@ router.get("/:id", async (req, res) => {
 // post a product
 router.post('/', async (req, res) => {
     const product = new Products({
-        description: req.body.description,
-        product_name: req.body.product_name,
+        category: req.body.category,
+        itemname: req.body.itemname,
         product_image: req.body.product_image,
-        product_category: req.body.product_category,
-        price: req.body.price
+        price: req.body.price,
+        fit: req.body.fit,
+        composition: req.body.composition,
+        designer: req.body.designer,
+        ishot: true
     })
 
     const savedProduct = await product.save()
@@ -57,8 +60,7 @@ router.delete('/:id', async (req, res) => {
 router.patch('/:id', async (req, res) => {
     try{
         const updateProduct = await Products.updateOne({ _id: req.params.id }, 
-            { $set: {description: req.body.description,
-                    product_name: req.body.product_name}})
+            { $set: {itemname: req.body.itemname}})
             res.json(updateProduct)
     }
     catch(err){
