@@ -34,7 +34,8 @@ router.post('/', async (req, res) => {
         fit: req.body.fit,
         composition: req.body.composition,
         designer: req.body.designer,
-        ishot: true
+        ishot: req.body.ishot,
+        type: req.body.type
     })
 
     const savedProduct = await product.save()
