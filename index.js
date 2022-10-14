@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+
+// import routes
 const productRoute = require('./routes/products')
 const designerRoute = require('./routes/designer')
 const cors = require('cors')
@@ -9,7 +11,7 @@ require('dotenv/config')
 
 
 app.use(cors({
-    origin: "https://jandf-clothing.vercel.app"
+    origin: "http://localhost:3000"
 }))
 // middlewares
 // app.use('/products', () => {

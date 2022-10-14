@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+
+// import design model
 const Designer = require('../models/Designer');
 
 // gets all the products
