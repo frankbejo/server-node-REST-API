@@ -42,7 +42,13 @@ const ProductSchema = mongoose.Schema({
         type: Date,
         default: Date()
     },
-    type: String
+    type: String,
+    sizes: [
+        {
+            size: String,
+            dimension: String
+        }
+    ]
     })
 
 module.exports = mongoose.model('Product', ProductSchema)

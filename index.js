@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use('/products', productRoute)
 app.use('/designer', designerRoute)
 // routes
-app.get("/", (req, res) => {
+app.get("/", (req, res) => { 
     res.send("Server is Running in Heroku")
 } )
 

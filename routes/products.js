@@ -24,6 +24,10 @@ router.get("/:id", async (req, res) => {
     }
 })
 
+router.get("/:category", async (req, res) => {
+
+})
+
 // post a product
 router.post('/', async (req, res) => {
     const product = new Products({
@@ -35,7 +39,8 @@ router.post('/', async (req, res) => {
         composition: req.body.composition,
         designer: req.body.designer,
         ishot: req.body.ishot,
-        type: req.body.type
+        type: req.body.type,
+        sizes: req.body.sizes
     })
 
     const savedProduct = await product.save()
