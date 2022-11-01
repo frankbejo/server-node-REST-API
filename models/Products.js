@@ -36,11 +36,11 @@ const ProductSchema = mongoose.Schema({
     ishot: Boolean,
     created: {
         type: Date,
-        default: Date()
+        default: Date.now()
     },
     updated: {
         type: Date,
-        default: Date()
+        default: Date.now()
     },
     type: String,
     sizes: [
