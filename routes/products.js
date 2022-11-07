@@ -4,6 +4,7 @@ const Products = require('../models/Products');
 
 // gets all the products
 router.get('/', async (req, res) => {
+    res.setHeader("Cache-Control","s-maxage=10, stale-while-revalidate")
     try{
         const products = await Products.find();
         res.json(products)
