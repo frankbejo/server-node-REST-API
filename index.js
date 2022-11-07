@@ -24,7 +24,7 @@ app.use('/products', productRoute)
 app.use('/designer', designerRoute)
 // routes
 app.get("/", (req, res) => { 
-    res.send("Server is Running in Heroku")
+    res.send("Server is Running in Railway")
 } )
 
 // connect to db
