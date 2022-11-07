@@ -11,7 +11,7 @@ require('dotenv/config')
 
 
 app.use(cors({
-    origin: "http://localhost:3000"
+    origin: "https://jandf-clothing.vercel.app"
 }))
 // middlewares
 // app.use('/products', () => {
